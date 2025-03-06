@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+
+body {
+  background-image: radial-gradient(#3A3456, #211E2E);
+  height: 100vh;
+}
+
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+.light {
+  background-image: conic-gradient(
+      from var(--rotate) at 50% 0%, #343045 40%, #C0B7E8,  #343045 60%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: me 2s ease-in-out infinite alternate;
+}
+
+@keyframes me {
+  from {
+      --rotate: 0.20turn  /* or 54deg */  /* 1turn = 360deg*/
+  } to {
+      --rotate: -0.20turn  /* -54deg */ 
+  }
+}
+
+.rounded-Image-Hero {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 100px;
+}
+
+.gradient-text {
+  font-weight: bold; 
+  background: linear-gradient(20deg, #8176AF, #C0B7E8); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.bg-Hero-Dis {
+  border-radius: 100px;
+  background-image: linear-gradient(90deg, #211E2E, #3A3456 , #211E2E );
+}
+
+.Window-Style-Hero {
+  padding: 39px;
+  border: 1px solid #eee1;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  border-radius: 15px;
+}
+
+.rounded-image-Main-About {
+  border-top-right-radius: 60px;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 150px;
+}
+
+.line-Main {
+  width: 90%;
+  height: 1px;
+  background-color: #3A3456;
+  margin: 50px auto;
+}
+
+.radial-article {
+  background-image: radial-gradient(#433D60, #211E2E);
+}
+
+.line-Footer {
+  margin: 0 auto;
+  width: 90%;
+  height: 4px;
+  background-image: linear-gradient(90deg, #211e2ed3, #433D60 , #211e2ed3 );
+  border-radius: 15px;
+}
+
+
+  /* Add this CSS to your styles */
+  .highlight {
+    animation: Bg 4s ease forwards;
+    
+  }
+  
+  @keyframes Bg {
+    0% {
+        background-color: transparent;
+        
+    }
+    50% {
+        background-color: #3A3456;
+        
+    }
+    100% {
+        background-color: transparent;
+        
+    }
+  }
+
+.Nav-trans {
+  transform: translateX(-50%);
+  z-index: 10;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  border: 1px solid #8176AF;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
